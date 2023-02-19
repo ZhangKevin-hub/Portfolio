@@ -3,71 +3,205 @@
   <head>
     <meta charset="utf-8">
     <title>Kevin's Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    </head>
   <body>
-    <header>
-      <h1>Welcome</h1>
+      
       <nav>
+        <h1>Kevin Zhang</h1>
         <ul>
           <li><a href="/#about">About</a>
           <li><a href="/#projects">Projects</a></li>
           <li><a href="/#contact">Contact</a></li>
         </ul>
       </nav>
-    </header>
     <main>
-        <!-- make a light mode so I don't get flashbanged-->
+        <!-- make a light mode so I don't get flashbanged -->
       <section id="about">
-          <!-- maybe throw in picutre of me? with something in background-->
-          <img src="/images/profile.jpg" alt="My profile picture">
-
-        <h2>About</h2>
-        <p>Welcome to my personal portfolio webpage! 
-            My name is Kevin Zhang and I am currently working towards becoming a software engineer.
-            I recently graduated from University at Buffalo with a degree in biology, but I have always had a passion for technology and problem solving.
-            I am currently enrolled in a bootcamp and will soon be a graduate. 
-            In my free time, I enjoy being taking leisurely walks and catching up on new developments in the tech industry.
-            I'm glad you stopped by to learn more about me and my work
-            Thank you for taking the time to learn about me!
-             Please take a look around and get to know me a little better. If you have any questions or comments, don't hesitate to reach out. Thanks for visiting!
-        </p>
+          <!-- maybe throw in picutre of me? with something in background -->
+          <div id ="portrait">
+            <img src="/images/Portrait.jpeg" alt="My profile picture">
+            <h1><b>Hi I'm Kevin, welcome to my Portfolio!</b></h1>
+          </div>
+          <div id = "aboutText">
+            <p>Welcome to my personal portfolio webpage! 
+                My name is Kevin Zhang and I am currently working towards becoming a software engineer.
+                I graduated from Tech Elevator, a bootcamp, which concentrated on Java web apps and I also graduated from SUNY Buffalo with a B.S. in Biological Science.
+                In my free time, I enjoy being taking leisurely walks and catching up on new developments in the tech industry.
+                I'm glad you stopped by to learn more about me and my work
+                Thank you for taking the time to learn about me!
+                Please take a look around and get to know me a little better. If you have any questions or comments, don't hesitate to reach out. Thanks for visiting!
+            </p>
+          </div>
       </section>
       <section id="projects">
         <h2>Projects</h2>
         <ul>
-            <!-- put visual path finder first with snapshot-->
-          <li>Project 1</li>
-          <li>Project 2</li>
-          <li>Project 3</li>
+             <!-- put visual path finder first with snapshot -->
+          <li>
+            <a href="https://github.com/ZhangKevin-hub/Algorithim_visualizer">
+              <project-card>
+                <img src="/images/Algorithim Visualizer.png" alt="Algorithim visualizer image"/>
+                <info>
+                  <h1>Algorithim Visualizer</h1>
+                  <p>
+                    A program was developed that uses the A* pathfinding algorithm to find the shortest path between two points on a grid with obstacles and display the grid and path visually using Java Swing library.
+                  </p>
+                </info>
+              </project-card>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/ZhangKevin-hub/VendingMachineTechElevator">
+              <project-card>
+                <img src="/images/Vending Machine.jpeg" alt="Vending Machine image"/>
+                <info>
+                  <h1>Vending Machine</h1>
+                  <p>
+                    A CLI program that uses File I/O to track inventory and log user activities. Uses OOP and basic algorithim to determine least amount of change to return. Made with Java.
+                  </p>
+                </info>
+              </project-card>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/ZhangKevin-hub/Fan_Band">
+              <project-card>
+                <img src="/images/TEnmo.jpeg" alt=" Cash System TEnmo image"/>
+                <info>
+                  <h1>TEnmo</h1>
+                  <p>
+                    A Cash System that allows authenticated users to send and recieve payments from others.
+                    Developed REST API to communicate via server, and validation tests. Made with Java and SQL.
+                  </p>
+                </info>
+              </project-card>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/ZhangKevin-hub/Fan_Band">
+              <project-card>
+                <img src="/images/fanband.jpg" alt="Fan Band image"/>
+                <info>
+                  <h1>Fan Band</h1>
+                  <p>
+                    A web app made with Vue.js to allow users to make and recieve messages from bands that they follow.
+                    Made with Vue.js, Java, SQL, Javascript, HTML, and CSS.
+                  </p>
+                </info>
+              </project-card>
+            </a>
+          </li>
         </ul>
       </section>
-      <!-- 
-          make these into icons
+      
+          <!-- make these into icons
           it would be flex so they are in row
           remove bullet points
-          align center
-        -->
+          align center -->
+        
       <section id="skills">
-        <h2>Languages</h2>
-        <ul>
-          <li>Java</li>
-          <li>PostgreSQL</li>
-          <li>HTML</li>
-          <li>css</li>
-          <li>Javascript</li>
-          <li>Vue.js</li>
-        </ul>
+        <h2>Skills</h2>
+          <div class="wrapper">
+            <div class="button">
+              <div id="button-Java">
+                <div class="icon">
+                  <i class="fa-brands fa-java"></i>
+                </div>
+                <span>
+                  Java
+                </span>
+              </div>
+            </div>
+            <div class="button">
+              <div id="button-SQL">
+                <div class="icon">
+                  <i class="fa-solid fa-database"></i>
+                </div>
+                <span>
+                  SQL
+                </span>
+              </div>
+            </div>
+            <div class="button">
+              <div id="button-HTML">
+                <div class="icon">
+                  <i class="fa-brands fa-html5"></i>
+                </div>
+                <span>
+                  HTML
+                </span>
+              </div>
+            </div>
+            <div class="button">
+              <div id="button-CSS">
+                <div class="icon">
+                  <i class="fa-brands fa-css3-alt"></i>
+                </div>
+                <span>
+                  CSS
+                </span>
+              </div>
+            </div>
+            <div class="button">
+              <div id="button-js">
+                <div class="icon">
+                  <i class="fa-brands fa-square-js"></i>
+                </div>
+                <span>
+                  Javascript
+                </span>
+              </div>
+            </div>
+            <div class="button">
+              <div id="button-Vue">
+                <div class="icon">
+                  <i class="fa-brands fa-vuejs"></i>
+                </div>
+                <span>
+                  Vue.js
+                </span>
+              </div>
+            </div>
+          </div>
       </section>
       <section id="contact">
         <h2>Contact</h2>
-        <p>Get in touch!
-            shoot me a message or connect with me on linkedin!
-        </p>
-        <ul>
-            <li>Email: <a href="mailto:kzhang5832@gmail.com">your@email.com</a></li>
-            <li>LinkedIn: <a href="https://linkedin.com/in/kzhanh58">Your Profile</a></li>
-          </ul>
+        <p>Get in touch! Shoot me a message or connect with me on LinkedIn!</p>
+        <div id="footer">
+          <div class = wrapper>
+              <div class="button">
+                <div id="contact-linkedin">
+                  <a href="https://github.com/ZhangKevin-hub" target="_blank">
+
+                    <div class="icon">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                      
+                    </div>
+                    <span>
+                      LinkedIn
+                    </span>
+                </a>
+                </div>
+              </div>
+              <div class="button">
+                <div id="contact-github">
+                  <a href="https://github.com/ZhangKevin-hub" target="_blank">
+
+                    <div class="icon">
+                        <i class="fa-brands fa-github"></i>
+                    </div>
+                    <span>
+                      GitHub
+                    </span>
+                  </a>
+                </div>
+
+
+              </div>
+          </div>
+        </div>
       </section>
     </main>
 

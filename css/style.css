@@ -1,0 +1,306 @@
+/* Set font family and background color for the entire page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: wheat;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(239, 253, 255, 1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+nav h1{
+    padding-left: 30px;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+nav li {
+    margin-right: 30px;
+}
+
+nav a {
+    color: #333;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: rgb(69, 193, 255);
+    border-bottom: 2px solid rgb(69, 193, 255);
+    text-shadow: rgba(186, 231, 247, 0.584) 1px 0 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Style the main section */
+main {
+    background-color: rgba(239, 253, 255, 0.939);
+    max-width: 800px;
+    margin: 7rem auto;
+    padding: 50px 100px 100px;
+    border-radius: 10px;
+}
+
+/* Style the "About" section */
+#about {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    padding: 20px;
+}
+
+#portrait {
+    margin-right: 40px;
+    position: relative;
+    display: flex;
+}
+
+#portrait img {
+    width: 10rem;
+    border: 2px solid #333;
+    transition: transform 0.5s ease;
+}
+
+#portrait:hover img {
+    transform: scale(1.05);
+}
+
+#portrait h1 {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    margin-left: 40px;
+    font-size: 40px;
+    color: rgb(0, 0, 0);
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+
+#portrait:hover h1 {
+    color: rgb(125, 197, 213);
+}
+
+#aboutText {
+    display: flex;
+}
+
+#aboutText p {
+    padding-top: 10px;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666;
+}
+
+  
+  /* Style the "Projects" section */
+  #projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #projects h2{
+      text-align: center;
+  }
+  #projects ul {
+    list-style-type: none;
+    margin-top: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 10px;
+  }
+  
+  #projects ul > li {
+    max-width: calc((100% - 40px) / 3); /* 40px is the combined value of the grid gap */
+  }
+  
+  project-card {
+    margin: 10px auto;
+    width: 20%;
+    min-width: 300px;
+    overflow: hidden;
+    display: block;
+    position: relative;
+    transition: .5s;
+    border-radius: 30px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.566);
+  }
+  
+  project-card img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: .5s;
+    will-change: transform;
+    min-height: 20em;
+    min-width: 20em;
+  }
+  
+  project-card info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(2);
+    color: white;
+    opacity: 0;
+    width: 80%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  project-card info h1 {
+    position: relative;
+    display: inline-block;
+  }
+  
+  project-card info h1::after {
+    content: " ";
+    width: 0%;
+    position: absolute;
+    border-bottom: 3px solid white;
+    left: 50%;
+    bottom: 0%;
+    transition: .5s;
+  }
+  
+  project-card info p {
+    line-height: 1.5em;
+  }
+  
+  project-card:hover img {
+    filter: brightness(20%) blur(3px);
+    transform: scale(2);
+  }
+  
+  project-card:hover info {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+  project-card:hover info h1::after {
+    width: 100%;
+    left: 0%;
+  }
+
+  #skills h2{
+    text-align: center;
+  }
+  .wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .wrapper .button{
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    margin: 0 5px;
+    float: left;
+    background: rgb(125, 197, 213);
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+  }
+  .wrapper .button:hover{
+      width: 150px;
+  }
+  .wrapper .button .icon{
+    display: inline-block;
+    text-align: center;
+    height: 60px;
+    width: 60px;
+    border-radius: 50px;
+    box-sizing: border-box;
+    line-height: 60px;
+  }
+  .wrapper .button .icon i{
+    font-size: 25px;
+    line-height: 60px;
+  }
+  .wrapper .button .icon span{
+      font-size: 20px;
+      font-weight: 500px;
+      line-height: 60px;
+      margin-left: 10px;
+      text-align: center;
+  }
+  .wrapper .button #button-Java:hover{
+    background: orange;
+    color: white;
+  }
+  .wrapper .button #button-SQL:hover{
+    background: white;
+    color: blue;
+  }
+  .wrapper .button #button-HTML:hover{
+    background: rgb(239, 110, 35);
+    color: white;
+  }
+  .wrapper .button #button-CSS:hover{
+    background: blue;
+    color: white;
+  }
+  .wrapper .button #button-js:hover{
+    background: black;
+    color: yellow;
+  }
+  .wrapper .button #button-Vue:hover{
+    background: green;
+    color: white;
+  }
+/* Style the "Contact" section */
+
+  #contact {
+    margin-top: 100px;
+  }
+  #contact h2{
+    text-align: center;
+
+  }
+  #contact p {
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
+  }
+  
+  #footer {
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  #footer a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: white;
+  }
+  .wrapper .button #contact-linkedin:hover {
+    background: blue;
+  }
+  .wrapper .button #contact-github:hover {
+    background: black;
+  }
+  
+
+
+  
