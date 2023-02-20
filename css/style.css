@@ -55,10 +55,14 @@ main {
 
 /* Style the "About" section */
 #about {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
-    padding: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  padding: 20px;
+  background-image: url('images/LetchWorth_State_Park.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.8;
 }
 
 #portrait {
