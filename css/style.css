@@ -1,18 +1,121 @@
-  html {
-    scroll-behavior: smooth;
-  }
+body {
+  font-family: Apercu;
+  background-color: #9bcfee;
+}
 
-  body {
-      font-family: Arial, sans-serif;
-      background-color: #9bcfee;
-  }
+.dark-mode {
+  background-color: #1a2228;
+  color: white;
+}
+.dark-mode #dark-mode-btn{
+  background-color: rgb(0, 0, 0);
 
+}
+#dark-mode-btn {
+  background-color: rgb(239, 253, 255);
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+#dark-mode-btn .fa-moon{
+  display: none;
+}
+.dark-mode #dark-mode-btn .fa-moon{
+  display: inline-block;
+}
+#dark-mode-btn .fa-sun{
+  display: inline-block;
+}
+.dark-mode #dark-mode-btn .fa-sun{
+  display: none;
+}
+.fa-sun, .fa-moon {
+  font-size: 24px;
+  margin-right: 5px;
+}
+
+.fa-sun {
+  color: #FDB813;
+}
+.fa-moon {
+  color: #ffdf96;
+}
+.dark-mode nav {
+  background-color: rgb(0, 0, 0);
+  box-shadow: 0 2px 5px rgba(0, 34, 119, 0.1);
+}
+.dark-mode nav a{
+  color: white;
+}
+.dark-mode nav a:hover{
+  color: rgb(194, 221, 255);
+  border-bottom: 2px solid rgb(194, 221, 255);
+}
+.dark-mode #about {
+  background-color: rgb(3, 13, 24);
+  box-shadow: rgba(1, 14, 19, 0.584) 12px 10px 20px;
+}
+.dark-mode #about h1{
+  color: white;
+}
+.dark-mode #about {
+  color: white;
+}
+.dark-mode #about #portrait img{
+  border-color: white;
+}
+.dark-mode #about p{
+  color: white;
+}
+.dark-mode #about p{
+  color: white;
+}
+.dark-mode .wrapper .button{
+  background-color: #1e394f;
+}
+.dark-mode .wrapper .button #button-Java:hover{
+  color: rgb(255, 207, 117);
+  background-color: #22262a;
+}
+.dark-mode .wrapper .button #button-SQL:hover{
+  color: rgb(135, 135, 255);
+  background-color: #1e394f;
+}
+.dark-mode .wrapper .button #button-HTML:hover{
+  color: rgb(255, 213, 135);
+  background-color: #1e394f;
+}
+.dark-mode .wrapper .button #button-CSS:hover{
+  color: rgb(135, 135, 255);
+  background-color: #1e394f;
+}
+.dark-mode .wrapper .button #button-js:hover{
+  color: rgb(251, 255, 135);
+  background-color: #1e394f;
+}
+.dark-mode .wrapper .button #button-Vue:hover{
+  color: rgb(155, 255, 148);
+  background-color: #1e394f;
+}
+.dark-mode .wrapper .button #contact-linkedin:hover {
+  background-color: #003b68;
+}
+.dark-mode .wrapper .button #contact-github:hover {
+  background-color: #1e394f;
+}
+
+.dark-mode #footer .wrapper .button:nth-child(3):hover{
+  background-color: #281a1a;
+}
   nav {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
-      background-color: rgba(239, 253, 255, 1);
+      background-color: rgb(239, 253, 255);
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       z-index: 999;
       display: flex;
@@ -27,6 +130,7 @@
       list-style: none;
       display: flex;
       flex-direction: row;
+      padding-right: 40px;
   }
 
   nav li {
@@ -41,8 +145,8 @@
   }
 
   nav a:hover {
-      color: rgb(69, 193, 255);
-      border-bottom: 2px solid rgb(69, 193, 255);
+      color: rgb(0, 170, 255);
+      border-bottom: 2px solid rgb(0, 170, 255);
       text-shadow: rgba(186, 231, 247, 0.584) 1px 0 10px;
       transition: all 0.2s ease-in-out;
   }
@@ -63,34 +167,42 @@
     margin-bottom: 10px;
     padding: 40px 50px 40px 50px;
     position: relative;
-    transition: transform .5s ease-in-out;
+    transition: all 0.5s ease-in-out;
     box-shadow: rgba(148, 185, 199, 0.584) 12px 10px 20px;
+  }
+  #typed-text {
+    padding-top: 40px;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgb(0, 0, 0);
   }
 
   #about:hover {
     transform: scale(1.05);
     rotate: .3deg;
   }
-
-
-  #about > * {
-    position: relative;
-    z-index: 1;
+  
+  #about:hover #portrait img {
+    animation: pulse .4s infinite alternate;
   }
+  
+  @keyframes pulse {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.05);
+    }
+  }  
 
-  #about-content {
-    background-color: rgba(255, 255, 255, 0.883);
-    padding: 20px;
-    border-radius: 10px;
-  }
 
-  #skills, #projects, #contact {
+  #skills, #projectheader,#projectpairs, #contact {
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 0.3s ease-out, transform 0.3s ease-out;
   }
 
-  #skills.show, #projects.show, #contact.show {
+  #skills.show, #projectheader.show, #projectpairs.show, #contact.show {
     opacity: 1;
     transform: translateY(0);
   }
@@ -120,22 +232,10 @@
       opacity: 1;
       transition: opacity 0.5s ease-in-out;
   }
-
-
-  #aboutText {
-      display: flex;
-  }
-
-  #aboutText p {
-      padding-top: 10px;
-      font-size: 1rem;
-      line-height: 1.6;
-      color: rgb(0, 0, 0);
-  }
-
   
   /* Projects */
   #projects {
+    margin-top: 60px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -150,17 +250,17 @@
     margin-top: 0;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 10px;
+    grid-gap: 100px 10px;
   }
   
   #projects ul > li {
     max-width: calc((100% - 40px) / 3); 
   }
-  
+
   project-card {
-    margin: 10px auto;
+    margin: 0px auto;
     width: 100%;
-    min-width: 300px;
+    min-width: 330px;
     overflow: hidden;
     display: block;
     position: relative;
@@ -230,6 +330,9 @@
     left: 0%;
   }
   /* Skills */
+  #skills{
+    margin: 40px 0 40px 0;
+  }
   #skills h2{
     text-align: center;
   }
@@ -254,9 +357,8 @@
   }
   #footer .wrapper .button:nth-child(3):hover{
     width: 280px;
-    background-image: linear-gradient(to bottom right,rgb(255, 58, 58), rgb(0, 171, 0));
-
-}
+    background-color: #B23121;
+  }
   .wrapper .button .icon{
     display: inline-block;
     text-align: center;
@@ -304,7 +406,7 @@
 /* Contact */
 
   #contact {
-    margin-top: 100px;
+    margin-top: 40px;
   }
   #contact h2{
     text-align: center;
@@ -328,10 +430,10 @@
     color: white;
   }
   .wrapper .button #contact-linkedin:hover {
-    background: blue;
+    background-color: blue;
   }
   .wrapper .button #contact-github:hover {
-    background: black;
+    background-color: black;
   }
   
 

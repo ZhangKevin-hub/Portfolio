@@ -3,19 +3,25 @@
   <head>
     <meta charset="utf-8">
     <title>Kevin's Portfolio</title>
-    <link rel="stylesheet" href="/Portfolio/css/style.css">
+    <!-- add /Portfolio/ -->
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-    <script src ="/Portfolio/js/index.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700">
+    <script src ="/js/index.js"></script>
+    
     </head>
   <body>
       
       <nav>
         <h1>Kevin Zhang</h1>
         <ul>
-          <li><a href="#about">About</a></li>
+          <li><a href="#about" id="about-link">About</a></li>
           <li><a href="/assets/Zhang_Kevin_Resume.pdf" target="_blank">Resume</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#projects" id="project-link">Projects</a></li>
+          <li><a href="#contact" id="contact-link">Contact</a></li>
+          <button id="dark-mode-btn">
+            <i class="fa fa-sun"></i><i class="fa-solid fa-moon"></i>
+          </button>        
         </ul>
       </nav>
     <main>
@@ -25,13 +31,8 @@
             <h1><b>Hi I'm Kevin, welcome to my Portfolio!</b></h1>
           </div>
           <div id = "aboutText">
-            <p>Welcome to my personal portfolio webpage! 
-                My name is Kevin Zhang and I am currently working towards becoming a software engineer.
-                I graduated from Tech Elevator, a bootcamp, which concentrated on Java web apps and I also graduated from SUNY Buffalo with a B.S. in Biological Science.
-                In my free time, I enjoy being taking leisurely walks and catching up on new developments in the tech industry.
-                I'm glad you stopped by to learn more about me and my work
-                Thank you for taking the time to learn about me!
-                Please take a look around and get to know me a little better. If you have any questions or comments, don't hesitate to reach out. Thanks for visiting!
+            <p id="typed-text">
+              Welcome to my personal portfolio webpage! My name is Kevin Zhang and I am currently working towards becoming a software engineer. I graduated from Tech Elevator, a bootcamp, which concentrated on Java web apps and I also graduated from SUNY Buffalo with a B.S. in Biological Science. In my free time, I enjoy being taking leisurely walks and catching up on new developments in the tech industry. I'm glad you stopped by to learn more about me and my work. Thank you for taking the time to learn about me! Please take a look around and get to know me a little better. If you have any questions or comments, don't hesitate to reach out. Thanks for visiting!
             </p>
           </div>
       </section>
@@ -101,62 +102,62 @@
           </div>
       </section>
       <section id="projects">
-        <h2>Projects</h2>
-        <ul>
-          <li>
-            <a href="https://github.com/ZhangKevin-hub/Algorithim_visualizer">
-              <project-card>
-                <img src="assets/images/Algorithim Visualizer.png" alt="Algorithim_visualizer_image"/>
-                <info>
-                  <h1>Algorithim Visualizer</h1>
-                  <p>
-                    A program was developed that uses the A* pathfinding algorithm to find the shortest path between two points on a grid with obstacles and display the grid and path visually using Java Swing library.
-                  </p>
-                </info>
-              </project-card>
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/ZhangKevin-hub/VendingMachineTechElevator">
-              <project-card>
-                <img src="assets/images/Vending Machine.jpeg" alt="Vending_Machine_image"/>
-                <info>
-                  <h1>Vending Machine</h1>
-                  <p>
-                    A CLI program that uses File I/O to track inventory and log user activities. Uses OOP and basic algorithim to determine least amount of change to return. Made with Java.
-                  </p>
-                </info>
-              </project-card>
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/ZhangKevin-hub/Fan_Band">
-              <project-card>
-                <img src="assets/images/TEnmo.jpeg" alt=" Cash_System_TEnmo_image"/>
-                <info>
-                  <h1>TEnmo</h1>
-                  <p>
-                    A Cash System that allows authenticated users to send and recieve payments from others.
-                    Developed REST API to communicate via server, and validation tests. Made with Java and SQL.
-                  </p>
-                </info>
-              </project-card>
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/ZhangKevin-hub/Fan_Band">
-              <project-card>
-                <img src="assets/images/fanband.jpg" alt="Fan_Band_image"/>
-                <info>
-                  <h1>Fan Band</h1>
-                  <p>
-                    A web app made with Vue.js to allow users to make and recieve messages from bands that they follow.
-                    Made with Vue.js, Java, SQL, Javascript, HTML, and CSS.
-                  </p>
-                </info>
-              </project-card>
-            </a>
-          </li>
+        <h2 id="projectheader">Projects</h2>
+        <ul id="projectpairs">
+            <li>
+              <a href="https://github.com/ZhangKevin-hub/Algorithim_visualizer">
+                <project-card>
+                  <img src="assets/images/Algorithim Visualizer.png" alt="Algorithim_visualizer_image"/>
+                  <info>
+                    <h1>Algorithim Visualizer</h1>
+                    <p>
+                      A program was developed that uses the A* pathfinding algorithm to find the shortest path between two points on a grid with obstacles and display the grid and path visually using Java Swing library.
+                    </p>
+                  </info>
+                </project-card>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/ZhangKevin-hub/VendingMachineTechElevator">
+                <project-card>
+                  <img src="assets/images/Vending Machine.jpeg" alt="Vending_Machine_image"/>
+                  <info>
+                    <h1>Vending Machine</h1>
+                    <p>
+                      A CLI program that uses File I/O to track inventory and log user activities. Uses OOP and basic algorithim to determine least amount of change to return. Made with Java.
+                    </p>
+                  </info>
+                </project-card>
+              </a>
+            </li>
+            <li >
+              <a href="https://github.com/ZhangKevin-hub/Fan_Band">
+                <project-card>
+                  <img src="assets/images/TEnmo.jpeg" alt=" Cash_System_TEnmo_image"/>
+                  <info>
+                    <h1>TEnmo</h1>
+                    <p>
+                      A Cash System that allows authenticated users to send and recieve payments from others.
+                      Developed REST API to communicate via server, and validation tests. Made with Java and SQL.
+                    </p>
+                  </info>
+                </project-card>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/ZhangKevin-hub/Fan_Band">
+                <project-card>
+                  <img src="assets/images/fanband.jpg" alt="Fan_Band_image"/>
+                  <info>
+                    <h1>Fan Band</h1>
+                    <p>
+                      A web app made with Vue.js to allow users to make and recieve messages from bands that they follow.
+                      Made with Vue.js, Java, SQL, Javascript, HTML, and CSS.
+                    </p>
+                  </info>
+                </project-card>
+              </a>
+            </li>
         </ul>
       </section>
       <section id="contact">
