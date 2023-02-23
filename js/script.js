@@ -1,6 +1,5 @@
 window.onload = function() {
     
-    // function to check if an element is in view
     function isElementInView(element) {
       var rect = element.getBoundingClientRect();
       return (
@@ -11,17 +10,15 @@ window.onload = function() {
       );
     }
     
-// function to check if the project section is in view and show it
-function checkForProjectSection() {
-    var projectSection = document.getElementById('projects');
-    if (!projectSection.classList.contains('show') && isElementInView(projectSection)) {
-      projectSection.classList.add('show');
-      window.removeEventListener('scroll', checkForProjectSection);
+    function checkForProjectSection() {
+        var projectSection = document.getElementById('projects');
+        if (!projectSection.classList.contains('show') && isElementInView(projectSection)) {
+        projectSection.classList.add('show');
+        window.removeEventListener('scroll', checkForProjectSection);
+        }
     }
-  }
   
     
-    // function to check if the skills section is in view and show it
     function checkForSkillsSection() {
       var skillsSection = document.getElementById('skills');
       if (isElementInView(skillsSection)) {
@@ -30,7 +27,6 @@ function checkForProjectSection() {
       }
     }
     
-    // function to check if the contact section is in view and show it
     function checkForContactSection() {
       var contactSection = document.getElementById('contact');
       if (isElementInView(contactSection)) {
@@ -39,7 +35,6 @@ function checkForProjectSection() {
       }
     }
     
-    // add event listeners to check for when the user scrolls and show the sections
     window.addEventListener('scroll', checkForProjectSection);
     window.addEventListener('scroll', checkForSkillsSection);
     window.addEventListener('scroll', checkForContactSection);
