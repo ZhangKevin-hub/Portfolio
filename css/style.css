@@ -1,7 +1,11 @@
 /* Set font family and background color for the entire page */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, sans-serif;
-    background-color: wheat;
+    background-color: #9bcfee;
 }
 
 nav {
@@ -46,34 +50,28 @@ nav a:hover {
 
 /* Main*/
 main {
-    background-color: rgba(229, 252, 255, 0.795);
     max-width: 800px;
     margin: 7rem auto;
     padding: 50px 100px 100px;
-    border-radius: 10px;
 }
 
 /* About*/
 #about {
+  background-color: rgba(239, 253, 255, 0.918);
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
-  padding: 20px;
+  padding: 40px 50px 40px 50px;
   position: relative;
+  transition: transform 0.5s ease;
+  box-shadow: rgba(148, 185, 199, 0.584) 12px 10px 20px;
 }
 
-#about::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url('/Portfolio/images/LetchWorth_State_Park.jpg');
-  background-size: cover;
-  border-radius: 10px;
-  opacity: 0.3;
+#about:hover {
+  transform: scale(1.05);
 }
+
 
 #about > * {
   position: relative;
@@ -86,7 +84,17 @@ main {
   border-radius: 10px;
 }
 
+#skills, #projects, #contact {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
 
+/* show the sections when they are scrolled into view */
+#skills.show, #projects.show, #contact.show {
+  opacity: 1;
+  transform: translateY(0);
+}
 #portrait {
     margin-right: 40px;
     position: relative;
@@ -113,11 +121,11 @@ main {
     opacity: 1;
     transition: opacity 0.5s ease-in-out;
 }
-#portrait:hover h1 {
+/* #portrait:hover h1 {
   color: rgb(243, 253, 255);
   text-shadow: 0px 1px 15px rgba(0, 140, 255, 0.8);
   transition: all 0.2s ease-in;
-}
+} */
 
 
 #aboutText {
@@ -157,7 +165,7 @@ main {
   
   project-card {
     margin: 10px auto;
-    width: 20%;
+    width: 100%;
     min-width: 300px;
     overflow: hidden;
     display: block;
@@ -241,7 +249,6 @@ main {
     height: 60px;
     width: 60px;
     margin: 0 5px;
-    float: left;
     background: rgb(125, 197, 213);
     border-radius: 50px;
     overflow: hidden;
