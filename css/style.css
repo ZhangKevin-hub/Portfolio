@@ -1,143 +1,136 @@
-/* Set font family and background color for the entire page */
-html {
-  scroll-behavior: smooth;
-}
+  html {
+    scroll-behavior: smooth;
+  }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #9bcfee;
-}
+  body {
+      font-family: Arial, sans-serif;
+      background-color: #9bcfee;
+  }
 
-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(239, 253, 255, 1);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    z-index: 999;
+  nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(239, 253, 255, 1);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      z-index: 999;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+  }
+  nav h1{
+      padding-left: 30px;
+  }
+  nav ul {
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+  }
+
+  nav li {
+      margin-right: 30px;
+  }
+
+  nav a {
+      color: #333;
+      font-size: 1rem;
+      font-weight: bold;
+      text-decoration: none;
+  }
+
+  nav a:hover {
+      color: rgb(69, 193, 255);
+      border-bottom: 2px solid rgb(69, 193, 255);
+      text-shadow: rgba(186, 231, 247, 0.584) 1px 0 10px;
+      transition: all 0.2s ease-in-out;
+  }
+
+  /* Main*/
+  main {
+      max-width: 800px;
+      margin: 7rem auto;
+      padding: 50px 100px 100px;
+  }
+
+  /* About*/
+  #about {
+    background-color: rgba(239, 253, 255, 0.918);
+    border-radius: 10px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-}
-nav h1{
-    padding-left: 30px;
-}
-nav ul {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-}
-
-nav li {
-    margin-right: 30px;
-}
-
-nav a {
-    color: #333;
-    font-size: 1rem;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-nav a:hover {
-    color: rgb(69, 193, 255);
-    border-bottom: 2px solid rgb(69, 193, 255);
-    text-shadow: rgba(186, 231, 247, 0.584) 1px 0 10px;
-    transition: all 0.2s ease-in-out;
-}
-
-/* Main*/
-main {
-    max-width: 800px;
-    margin: 7rem auto;
-    padding: 50px 100px 100px;
-}
-
-/* About*/
-#about {
-  background-color: rgba(239, 253, 255, 0.918);
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 10px;
-  padding: 40px 50px 40px 50px;
-  position: relative;
-  transition: transform 0.5s ease;
-  box-shadow: rgba(148, 185, 199, 0.584) 12px 10px 20px;
-}
-
-#about:hover {
-  transform: scale(1.05);
-}
-
-
-#about > * {
-  position: relative;
-  z-index: 1;
-}
-
-#about-content {
-  background-color: rgba(255, 255, 255, 0.883);
-  padding: 20px;
-  border-radius: 10px;
-}
-
-#skills, #projects, #contact {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
-}
-
-/* show the sections when they are scrolled into view */
-#skills.show, #projects.show, #contact.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-#portrait {
-    margin-right: 40px;
+    flex-direction: column;
+    margin-bottom: 10px;
+    padding: 40px 50px 40px 50px;
     position: relative;
-    display: flex;
-}
-
-#portrait img {
-    width: 10rem;
-    border: 2px solid #333;
     transition: transform 0.5s ease;
-}
+    box-shadow: rgba(148, 185, 199, 0.584) 12px 10px 20px;
+  }
 
-#portrait:hover img {
+  #about:hover {
     transform: scale(1.05);
-}
+  }
 
-#portrait h1 {
-    display: block;
-    align-items: center;
-    justify-content: center;
-    margin-left: 40px;
-    font-size: 40px;
-    color: rgb(0, 0, 0);
+
+  #about > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  #about-content {
+    background-color: rgba(255, 255, 255, 0.883);
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  #skills, #projects, #contact {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+  }
+
+  #skills.show, #projects.show, #contact.show {
     opacity: 1;
-    transition: opacity 0.5s ease-in-out;
-}
-/* #portrait:hover h1 {
-  color: rgb(243, 253, 255);
-  text-shadow: 0px 1px 15px rgba(0, 140, 255, 0.8);
-  transition: all 0.2s ease-in;
-} */
+    transform: translateY(0);
+  }
+  #portrait {
+      margin-right: 40px;
+      position: relative;
+      display: flex;
+  }
+
+  #portrait img {
+      width: 10rem;
+      border: 2px solid #333;
+      transition: transform 0.5s ease;
+  }
+
+  #portrait:hover img {
+      transform: scale(1.05);
+  }
+
+  #portrait h1 {
+      display: block;
+      align-items: center;
+      justify-content: center;
+      margin-left: 40px;
+      font-size: 40px;
+      color: rgb(0, 0, 0);
+      opacity: 1;
+      transition: opacity 0.5s ease-in-out;
+  }
 
 
-#aboutText {
-    display: flex;
-}
+  #aboutText {
+      display: flex;
+  }
 
-#aboutText p {
-    padding-top: 10px;
-    font-size: 1rem;
-    line-height: 1.6;
-    color: rgb(0, 0, 0);
-}
+  #aboutText p {
+      padding-top: 10px;
+      font-size: 1rem;
+      line-height: 1.6;
+      color: rgb(0, 0, 0);
+  }
 
   
   /* Projects */
