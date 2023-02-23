@@ -7,9 +7,6 @@ window.onload = function() {
     document.body.classList.toggle('dark-mode');
   });
   
-  
-  
-
   aboutLink.addEventListener('click', function(event) {
     event.preventDefault();
     document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
