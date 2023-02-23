@@ -63,12 +63,13 @@
     margin-bottom: 10px;
     padding: 40px 50px 40px 50px;
     position: relative;
-    transition: transform 0.5s ease;
+    transition: transform .5s ease-in-out;
     box-shadow: rgba(148, 185, 199, 0.584) 12px 10px 20px;
   }
 
   #about:hover {
     transform: scale(1.05);
+    rotate: .3deg;
   }
 
 
@@ -251,6 +252,11 @@
   .wrapper .button:hover{
       width: 150px;
   }
+  #footer .wrapper .button:nth-child(3):hover{
+    width: 280px;
+    background-image: linear-gradient(to bottom right,rgb(255, 58, 58), rgb(0, 171, 0));
+
+}
   .wrapper .button .icon{
     display: inline-block;
     text-align: center;
